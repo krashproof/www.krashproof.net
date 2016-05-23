@@ -7,3 +7,8 @@ dependencies:
 test:
   override:
     - html5validator --root html/
+deployment:
+  aws:
+    branch: master
+    commands:
+    - /bin/bash/ deploy.sh
