@@ -7,3 +7,9 @@ dependencies:
 test:
   override:
     - html5validator --root html/
+deployment:
+  production:
+    branch: master
+    commands:
+      - sudo pip install awscli
+      - /bin/bash deploy.sh
