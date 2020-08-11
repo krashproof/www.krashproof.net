@@ -15,4 +15,4 @@ case $CIRCLE_BRANCH in
 esac
 
 echo "deploying to bucket : $BUCKET_NAME"
-aws s3 sync ./html s3://$BUCKET_NAME --cache-control "$CACHE_CONTROL"
+aws s3 sync ./html s3://$BUCKET_NAME --cache-control "$CACHE_CONTROL" --acl public-read
